@@ -4,7 +4,8 @@ require_once 'class/template.php';
 require_once 'controller/UserController.php';
 
 class FrontController extends AbstractController {
-    
+    public static $action; 
+    public static $site; 
     public function execute() 
     {
         FrontController::$action = isset($_GET['action']) ? $_GET['action'] : 'default';
