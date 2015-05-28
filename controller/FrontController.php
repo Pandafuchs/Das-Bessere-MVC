@@ -5,7 +5,10 @@ require_once 'controller/UserController.php';
 
 class FrontController extends AbstractController {
     
-    public function execute() {
+    public function execute() 
+    {
+        FrontController::$action = isset($_GET['action']) ? $_GET['action'] : 'default';
+        FrontController::$site = isset($_GET['site']) ? $_GET['site'] : 'home';
         if (isset($_SESSION["ID"])) 
         {
             // if  User is logged in, call the Usercontroller. You can also add other Controller (Admincontroller for backend).
