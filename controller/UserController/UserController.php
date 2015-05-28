@@ -1,18 +1,12 @@
 <?php
-
-/*
- * light weight php mvc-framework
- *
- * https://github.com/ReWrite94/lightweight-php-mvc-framework
-*/
+/* Model Classes */
+require_once 'model/example.php';
 
 class UserController extends AbstractController { 
     public function execute() {    
-        $action = $_GET["page"];
     
-        switch ($action) {
+        switch (Frontcontroller::$action) {
             case 'index' : {
-                $this->template->addParam("title", "Startseite");
                 $this->template->setContent("view/user/home.php");
                 $this->template->render();
                 break;
@@ -23,7 +17,6 @@ class UserController extends AbstractController {
                 break;
             }
             default : {
-                $this->template->addParam("title", "Startseite");
                 $this->template->setContent("view/user/home.php");
                 $this->template->render();
                 break;
