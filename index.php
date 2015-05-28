@@ -1,11 +1,4 @@
 <?php
-
-/*
- * light weight php mvc-framework
- *
- * https://github.com/ReWrite94/lightweight-php-mvc-framework
-*/
-
 //Report all Errors
 error_reporting(E_ALL);
 
@@ -13,7 +6,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
 session_start();
-include_once 'controller/frontcontroller.php';
+include_once 'controller/FrontController.php';
 include_once 'class/template.php';
 $template = new Template();
 $frontController = new FrontController($template);
