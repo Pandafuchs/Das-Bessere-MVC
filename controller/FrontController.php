@@ -1,7 +1,7 @@
 <?php
-require_once 'controller/abstractcontroller.php';
+require_once 'controller/AbstractController.php';
 require_once 'class/template.php';
-require_once 'controller/UserController/UserController.php';
+require_once 'controller/UserController.php';
 
 class FrontController extends AbstractController {
     
